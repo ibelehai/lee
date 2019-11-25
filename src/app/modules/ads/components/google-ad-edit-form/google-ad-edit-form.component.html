@@ -1,0 +1,25 @@
+<form [formGroup]="editForm" class="google-form">
+    <div class="google-form__input-wrapper">
+        <label class="edit-form__label">Headline</label>
+        <input formControlName="headline" type="text" class="edit-form__input" />
+    </div>
+    <div class="google-form__input-wrapper">
+        <label class="edit-form__label">Description</label>
+        <textarea formControlName="description" class="edit-form__textarea"></textarea>
+    </div>
+    <div class="google-form__input-wrapper">
+        <label class="edit-form__label">Link</label>
+        <input formControlName="link" class="edit-form__input" />
+    </div>
+    <div class="google-form__input-wrapper">
+        <label class="edit-form__label">Tags</label>
+        <app-multiple-select-box
+            [options]="tags"
+            [selected]="ad.tags"
+            isValid="true"
+            (select)="handleTagSelect($event)"
+            [modelType]="multipleSelectBoxModelType"
+        ></app-multiple-select-box>
+    </div>
+</form>
+ 

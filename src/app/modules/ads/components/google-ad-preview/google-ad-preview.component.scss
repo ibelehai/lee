@@ -1,0 +1,49 @@
+@import "../../../../constants/colors.scss";
+
+$headline_color: $color_blue1;
+$subheading_color: $color_green1;
+$text_color: $color_grey1;
+
+.google-ad {
+    width: 100%;
+    padding: 19px 32px 19px 16px;
+    background-color: white;
+    font-family: 'Arial';
+
+    .google-ad__headline {
+        color: $headline_color;
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .google-ad__subheading-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .google-ad__subheading {
+        color: $subheading_color;
+        font-size: 16px;
+    }
+
+    .google-ad__ad-label {
+        width: 22px;
+        height: 14px;
+        border: 1px solid $subheading_color;
+        color: $subheading_color;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .google-ad__description {
+        font-size: 14px;
+        color: $text_color;
+        line-height: 1.4;
+    }
+}
+

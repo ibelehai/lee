@@ -1,0 +1,15 @@
+@import "../../../../constants/colors.scss";
+@import "../../../../../styles/forms.scss";
+
+.instagram-form {
+    width: 100%;
+
+    .instagram-form__input-wrapper {
+        width: 100%;
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

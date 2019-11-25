@@ -1,0 +1,142 @@
+.edit-form__input,
+.edit-form__textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $color_grey9;
+    outline: none;
+    font-size: 16px;
+    padding-left: 4px;
+    color: $color_grey8;
+    font-weight: 600;
+}
+
+.edit-form__input {
+    height: 40px;
+    padding-bottom: 5px;
+}
+
+.edit-form__input--select, .edit-form__input--multiple-select {
+    padding-bottom: 0;
+    padding-left: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.edit-form__input--multiple-select {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.edit-form__select-item {
+    background-color: white;
+    height: 40px;
+    width: 100%;
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    outline: none;
+
+    &:hover {
+        background-color: $color_grey7;
+    }
+}
+
+.edit-form__select-item--selected {
+    background-color: $color_grey7;
+}
+
+.edit-form__textarea {
+    padding-top: 10px;
+    padding-bottom: 18px;
+    resize: none;
+}
+
+.edit-form__select-display {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+    outline: none;
+
+}
+
+.edit-form__select-options-list {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 5;
+    max-height: 200px;
+    overflow: auto;
+    box-shadow: 0 0 33px 0 rgba(137, 156, 197, 0.17);
+
+    &.top {
+        top: -210px;
+    }
+}
+
+.edit-form__label {
+    color: $color_grey2;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.63;
+}
+
+.edit-form__images-list {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    margin-top: 12px;
+}
+
+.edit-form__image {
+    min-width: 155px;
+    max-width: 155px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 18px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.edit-form__add-image {
+    border: 2px dashed $color_grey7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color_grey7;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    i {
+        margin-right: 12px;
+        font-size: 24px
+    }
+}
+
+.edit-form__image-input {
+    display: none;
+}
+
+.edit-form__tag {
+    height: 25px;
+    padding: 0 12px;
+    background-color: $color_grey7;
+    color: white; 
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,55 @@
+@import "../../../../constants/colors.scss";
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: solid 1px #e4e6e9;
+    padding-bottom: 20px;
+    margin-top: 8px;
+
+    .tabs__tab {
+        list-style: none;
+        color: $color_grey2;
+        font-weight: 600;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        cursor: pointer;
+
+        &:first-child {
+            justify-content: flex-start;
+        }
+
+        &:last-child {
+            justify-content: flex-end;
+        }
+
+        &:hover {
+            color: $color_green2;
+
+            i {
+                color: $color_green2;
+            }
+        }
+
+        i {
+            margin-right: 8px;
+            color: $color_grey7;
+        }
+    }
+
+    .tabs__tab--active {
+        color: $color_green2;
+
+        i {
+            color: $color_green2;
+        }
+    }
+}
+
+.tabs__content-wrapper {
+    padding: 0 24px 24px 24px;
+}

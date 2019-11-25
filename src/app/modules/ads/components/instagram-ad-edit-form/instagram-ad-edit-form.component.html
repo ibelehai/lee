@@ -1,0 +1,48 @@
+<form [formGroup]="editForm" class="instagram-form">
+    <div class="instagram-form__input-wrapper">
+        <label class="edit-form__label">Post to</label>
+        <app-select-box
+            [options]="accounts"
+            [selected]="ad.postTo"
+            isValid="true"
+            (select)="handleAccountSelect($event)"
+            [modelType]="selectBoxModelType"
+        ></app-select-box>
+    </div>
+    <div class="instagram-form__input-wrapper">
+        <label class="edit-form__label">Text</label>
+        <textarea formControlName="text" class="edit-form__textarea"></textarea>
+    </div>
+    <div class="instagram-form__input-wrapper">
+        <label class="edit-form__label">Images</label>
+        <div class="edit-form__images-list">
+            <ng-container *ngFor="let image of displayedImages">
+                <img [src]="image" class="edit-form__image" />
+            </ng-container>
+            <label for="image-input" class="edit-form__image edit-form__add-image"
+                ><i class="fas fa-plus-circle"></i>Add image</label
+            >
+            <input
+                type="file"
+                id="image-input"
+                class="edit-form__image-input"
+                (change)="handleImageUpload($event)"
+                (click)="handleImageInputClick($event)"
+            />
+        </div>
+    </div>
+    <div class="instagram-form__input-wrapper">
+        <label class="edit-form__label">Link to</label>
+        <input formControlName="linkTo" type="text" class="edit-form__input" />
+    </div>
+    <div class="instagram-form__input-wrapper">
+        <label class="edit-form__label">Tags</label>
+        <app-multiple-select-box
+            [options]="tags"
+            [selected]="ad.tags"
+            isValid="true"
+            (select)="handleTagSelect($event)"
+            [modelType]="multipleSelectBoxModelType"
+        ></app-multiple-select-box>
+    </div>
+</form>

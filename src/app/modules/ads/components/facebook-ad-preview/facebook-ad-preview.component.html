@@ -1,0 +1,25 @@
+<div class="facebook-ad">
+    <div class="facebook-ad__top-row">
+        <div class="facebook-ad__user-row">
+            <img [src]="ad.postTo.image" class="facebook-ad__avatar" />
+            <div>
+                <p class="facebook-ad__user-name">{{ ad.postTo.name }}</p>
+                <p class="facebook-ad__sponsored-label">Sponsored</p>
+            </div>
+        </div>
+        <div class="facebook-ad__text">{{ ad.text }}</div>
+    </div>
+
+    <img class="facebook-ad__image" [src]="ad.images[0]" />
+
+    <div class="facebook-ad__bottom-row">
+        <p class="facebook-ad__cta-link">{{ ad.CTALink }}</p>
+        <p class="facebook-ad__description">{{ ad.description }}</p>
+        <p class="facebook-ad__link">{{ ad.linkTo }}</p>
+        <div class="facebook-ad__actions">
+            <div class="facebook-ad__action"><i class="icon far fa-thumbs-up"></i> Like</div>
+            <div class="facebook-ad__action"><i class="icon far fa-comment-alt"></i> Comment</div>
+            <div class="facebook-ad__action"><i class="icon fas fa-share"></i> Share</div>
+        </div>
+    </div>
+</div>

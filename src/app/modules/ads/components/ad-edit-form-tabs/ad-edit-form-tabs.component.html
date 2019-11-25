@@ -1,0 +1,14 @@
+<ul class="tabs">
+    <li
+        *ngFor="let tab of tabs"
+        (click)="selectTab(tab)"
+        class="tabs__tab"
+        [class.tabs__tab--active]="tab.active"
+    >
+        <i [ngClass]="getIconClassName(tab.title)"></i>
+        {{ tab.title }}
+    </li>
+</ul>
+<div class="tabs__content-wrapper">
+    <ng-content></ng-content>
+</div>

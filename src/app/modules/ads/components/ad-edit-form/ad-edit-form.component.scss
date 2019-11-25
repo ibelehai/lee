@@ -1,0 +1,70 @@
+@import "../../../../constants/colors.scss";
+
+.edit-form {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-left: solid 1px #e4e6e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    font-weight: 500;
+
+    .edit-form__header {
+        padding: 24px 24px 0 24px;
+    }
+
+    .edit-form__form-container {
+    }
+
+    .edit-form__footer {
+        min-height: 70px;
+        max-height: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+        border-top: solid 1px #e4e6e9;
+        padding: 0 24px;
+    }
+
+    .edit-form__button {
+        border-radius: 100px;
+        border: none;
+        padding: 0 22px;
+        height: 40px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        cursor: pointer;
+        outline: none;
+
+        i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    }
+
+    .edit-form__button--primary {
+        background-color: $color_green2;
+        color: white;
+    }
+
+    .edit-form__button--secondary {
+        color: $color_green2;
+        background-color: transparent;
+    }
+
+    .edit-form__name-input {
+        border: none;
+        width: 100%;
+        font-size: 30px;
+        font-weight: bold;
+        color: $color_grey2;
+        line-height: 1.2;
+        outline: none;
+        margin: 8px 0;
+    }
+}

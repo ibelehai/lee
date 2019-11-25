@@ -1,0 +1,25 @@
+<div class="instagram-ad">
+    <div class="instagram-ad__top-row">
+        <img [src]="ad.postTo.image" class="instagram-ad__avatar" />
+        <p class="instagram-ad__user-name">
+            {{ ad.postTo.name }}
+        </p>
+    </div>
+    <img [src]="ad.images[0]" alt="Instagram" class="instagram-ad__image" />
+    <div class="instagram-ad__actions-row">
+        <div class="left">
+            <div class="action"><i class="icon far fa-heart"></i></div>
+            <div class="action"><i class="icon far fa-comment"></i></div>
+            <div class="action"></div>
+        </div>
+        <div class="right">
+            <div class="action"><i class="icon far fa-bookmark"></i></div>
+        </div>
+    </div>
+    <p class="instagram-ad__text">
+        <span class="instagram-ad__user-name">
+            {{ ad.postTo.name }}
+        </span>
+        {{ ad.text }}
+    </p>
+</div>

@@ -1,0 +1,17 @@
+@import "../../../../constants/colors.scss";
+@import "../../../../../styles/forms.scss";
+
+.google-form {
+    width: 100%;
+    font-family: 'Nunito';
+    font-weight: 500;
+
+    .google-form__input-wrapper {
+        width: 100%;
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

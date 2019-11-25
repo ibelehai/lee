@@ -1,0 +1,11 @@
+<ng-container [ngSwitch]="type">
+    <div *ngSwitchCase="adTypes.Google" class="label google-ad-label">
+        <i [ngClass]="getIconClassName()"></i> Google
+    </div>
+    <div *ngSwitchCase="adTypes.Facebook" class="label facebook-ad-label">
+        <i [ngClass]="getIconClassName()"></i> Facebook
+    </div>
+    <div *ngSwitchCase="adTypes.Instagram" class="label instagram-ad-label">
+        <i [ngClass]="getIconClassName()"></i> Instagram
+    </div>
+</ng-container>

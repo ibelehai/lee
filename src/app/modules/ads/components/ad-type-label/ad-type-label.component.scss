@@ -1,0 +1,39 @@
+@import "../../../../constants/colors.scss";
+
+$google_label_color: $color_red1;
+$facebook_label_color: $color_blue3;
+$instagram_label_color: $color_purple1;
+
+.label {
+    width: 120px;
+    height: 22px;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Nunito';
+    font-weight: bold;
+}
+
+.icon {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    font-size: 14px;
+}
+
+.google-ad-label {
+    background-color: $google_label_color;
+}
+
+.facebook-ad-label {
+    background-color: $facebook_label_color;
+}
+
+.instagram-ad-label {
+    background-color: $instagram_label_color;
+}

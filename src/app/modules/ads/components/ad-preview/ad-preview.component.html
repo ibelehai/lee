@@ -1,0 +1,8 @@
+<ng-container [ngSwitch]="adType">
+    <app-google-ad-preview *ngSwitchCase="adTypes.Google" [ad]="ad.ad"></app-google-ad-preview>
+    <app-facebook-ad-preview *ngSwitchCase="adTypes.Facebook" [ad]="ad.ad"></app-facebook-ad-preview>
+    <app-instagram-ad-preview
+        *ngSwitchCase="adTypes.Instagram"
+        [ad]="ad.ad"
+    ></app-instagram-ad-preview>
+</ng-container>

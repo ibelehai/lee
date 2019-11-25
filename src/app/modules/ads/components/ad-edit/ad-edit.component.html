@@ -1,0 +1,38 @@
+<div class="ad-page">
+    <div *ngIf="ad && !isTagsListLoading" class="ad-page__content">
+        <section class="ad-page__preview-container">
+            <div class="ad-page__top-row">
+                <a [routerLink]="[routes.ADS]" class="ad-page__previous-page-link">
+                    <div class="icon ad-page__close-icon"></div>
+                    Back to previous page
+                </a>
+            </div>
+            <div class="ad-page__ad-container">
+                <app-ad-preview-label [adType]="ad.type"></app-ad-preview-label>
+                <div class="ad-page__ad-wrapper">
+                    <app-ad-preview [ad]="ad"></app-ad-preview>
+                </div>
+                <p class="ad-page__disclaimer">
+                    Social networks make constantly make updates do the finished article may look
+                    different to the preview above.
+                    <a class="reset-styles ad-page__disclaimer" href="#"
+                        ><strong>Learn more</strong></a
+                    >
+                </p>
+            </div>
+        </section>
+        <section class="ad-page__form-container">
+            <app-ad-edit-form
+                [ad]="ad"
+                [accounts]="accounts"
+                [accountsLoading]="isAccountsListLoading"
+                [tags]="tags"
+                (changes)="handleFormChange($event)"
+                (changeName)="handleAdNameChange($event)"
+                (uploadImage)="handleImageUpload($event)"
+                (changeTags)="handleTagsChange($event)"
+            ></app-ad-edit-form>
+        </section>
+    </div>
+    <app-spinner *ngIf="isAdLoading"></app-spinner>
+</div>

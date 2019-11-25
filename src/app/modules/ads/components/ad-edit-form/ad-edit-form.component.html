@@ -1,0 +1,60 @@
+<div class="edit-form">
+    <section>
+        <div class="edit-form__header">
+            <app-ad-type-label [type]="adType"></app-ad-type-label>
+            <form [formGroup]="adForm">
+                <input formControlName="name" type="text" class="edit-form__name-input" />
+            </form>
+        </div>
+        <app-ad-edit-form-tabs>
+            <app-ad-edit-form-tab title="Content">
+                <div class="edit-form__form-container" [ngSwitch]="adType">
+                    <app-google-ad-edit-form
+                        *ngSwitchCase="adTypes.Google"
+                        [ad]="ad.ad"
+                        [tags]="tags"
+                        (changes)="handleFormChanges($event)"
+                        (changeTags)="handleTagsChange($event)"
+                    ></app-google-ad-edit-form>
+                    <ng-container *ngIf="accounts.length">
+                        <app-facebook-ad-edit-form
+                            *ngSwitchCase="adTypes.Facebook"
+                            [ad]="ad.ad"
+                            [accounts]="accounts"
+                            [tags]="tags"
+                            (changes)="handleFormChanges($event)"
+                            (uploadImage)="handleImageUpload($event)"
+                            (changeTags)="handleTagsChange($event)"
+                        ></app-facebook-ad-edit-form>
+                        <app-instagram-ad-edit-form
+                            *ngSwitchCase="adTypes.Instagram"
+                            [ad]="ad.ad"
+                            [accounts]="accounts"
+                            [tags]="tags"
+                            (changes)="handleFormChanges($event)"
+                            (uploadImage)="handleImageUpload($event)"
+                            (changeTags)="handleTagsChange($event)"
+                        ></app-instagram-ad-edit-form>
+                    </ng-container>
+                </div>
+            </app-ad-edit-form-tab>
+            <app-ad-edit-form-tab title="Notes">
+                Notes
+            </app-ad-edit-form-tab>
+            <app-ad-edit-form-tab title="Chat">
+                Chat
+            </app-ad-edit-form-tab>
+            <app-ad-edit-form-tab title="Activity">
+                Activity
+            </app-ad-edit-form-tab>
+        </app-ad-edit-form-tabs>
+    </section>
+    <section class="edit-form__footer">
+        <button class="edit-form__button edit-form__button--secondary">
+            <i class="far fa-calendar-alt"></i> Schedule for later
+        </button>
+        <button class="edit-form__button edit-form__button--primary">
+            <i class="fab fa-telegram-plane"></i> Post now
+        </button>
+    </section>
+</div>

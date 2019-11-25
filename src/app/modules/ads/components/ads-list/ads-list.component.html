@@ -1,0 +1,13 @@
+<div class="list">
+    <ng-container *ngIf="adsList.length">
+        <ng-container *ngFor="let ad of adsList">
+            <a [routerLink]="generateAdLink(ad.id)" class="list__item">
+                <!-- <div class="list__item"> -->
+                    <p class="item-name">{{ ad.name }}</p>
+                    <app-ad-type-label [type]="ad.type"></app-ad-type-label>
+                    <app-ad-preview [ad]="ad"></app-ad-preview>
+                <!-- </div> -->
+            </a>
+        </ng-container>
+    </ng-container>
+</div>

@@ -1,0 +1,25 @@
+<div class="edit-form__input edit-form__input--select">
+    <div
+        class="edit-form__select-display"
+        [class.select__display--invalid]="!isValid"
+        [class.select__display--disabled]="isDisabled"
+        (click)="handleSelectDisplayClick()"
+        tabindex="0"
+        [id]="name"
+        #selectDisplay
+    >
+        <div class="select__caret" [class.select__caret--open]="areOptionsVisible"></div>
+        {{ selected.name }}
+    </div>
+    <div [ngClass]="getOptionsListClassName()" *ngIf="areOptionsVisible" #selectList>
+        <div
+            *ngFor="let option of options; let i = index"
+            class="edit-form__select-item"
+            [class.edit-form__select-item--selected]="checkIfListOptionSelected(i, option)"
+            (click)="handleSelectItemClick(option)"
+            tabindex="-1"
+        >
+            {{ option.name }}
+        </div>
+    </div>
+</div>
